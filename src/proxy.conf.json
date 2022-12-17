@@ -1,0 +1,9 @@
+{
+    "/api/*": {
+     
+       "target":"http://csrconnect-lb-1383631692.us-east-1.elb.amazonaws.com/csrconnect",
+        "secure": false,
+        "logLevel": "debug",
+        "pathRewrite":{"^/api":""}
+    }
+}

@@ -1,0 +1,30 @@
+<section class="view intro-2 ">
+  <h1 class="csrhead">CSR Connect</h1>
+    <div class="full-bg-img">
+      <div class="container flex-center"> 
+        <div class="login-wrapper">
+            <form  action="" class="example-form form">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>User Name</mat-label>
+            <input class="input-group" matInput placeholder="Enter your name" name="usename"[(ngModel)] ="username" required>
+            </mat-form-field>
+            <span *ngIf="error1"> <button mat-button color="accent">Please Enter User Name !!</button></span>
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input class="input-group" matInput placeholder="Enter your password" value="" name="password" type="password" [(ngModel)]= "password" required>
+            </mat-form-field>
+            <span *ngIf="error2"> <button mat-button color="accent">Please Enter Password !!</button></span>
+            <span></span>
+            <button mat-raised-button color="primary" style="margin-right: 40px;" (click)="submit()">Login</button>
+            <button mat-raised-button color="primary"  style="margin-right: 40px;" (click)="register()">Register</button>
+            <span *ngIf="show"> <button mat-button color="accent">Login success !!</button></span>
+            <span *ngIf="error"> <button mat-button color="accent">Login Failed !!</button></span>
+            </form>
+            </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+

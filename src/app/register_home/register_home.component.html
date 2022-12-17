@@ -1,0 +1,60 @@
+<section class="view intro-2 ">
+  <h1 class="csrhead">CSR Connect</h1>
+  <div class="full-bg-img">
+    <div class="container flex-center">
+      <div class="login-wrapper">
+        <form action="" class="example-form form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>User Name</mat-label>
+            <input class="input-group" matInput placeholder="Enter your name" name="usename" [(ngModel)]="username"
+              required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>First Name</mat-label>
+            <input class="input-group" matInput placeholder="Enter your first name" value="" name="fname"
+             [(ngModel)]="fname" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input class="input-group" matInput placeholder="Enter your Last Name" value="" name="lname" 
+              [(ngModel)]="lname" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Contact</mat-label>
+            <input class="input-group" matInput placeholder="Enter your Email" value="" name="email" type="email"
+              [(ngModel)]="email" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input class="input-group" matInput placeholder="Enter your Password" value="" name="Password" type="password"
+              [(ngModel)]="password" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Re-enter Password</mat-label>
+            <input class="input-group" matInput placeholder="Enter your Password" value="" name="Password" type="password"
+              [(ngModel)]="password2" required>
+          </mat-form-field>
+          <span *ngIf="show2"> <button mat-button color="accent">Please Enter Same Password!!!</button></span>
+          <span *ngIf="show4"> <button mat-button color="accent">Password should br between 8 and 15 characters!!!</button></span>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Role</mat-label>
+            <input class="input-group" matInput placeholder="Enter your Role" value="" name="role" 
+              [(ngModel)]="role" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Organisation Name</mat-label>
+            <input class="input-group" matInput placeholder="Enter your Organisation name" value="" name="Organisation" 
+              [(ngModel)]="orgname" required>
+          </mat-form-field>
+          <span></span>
+
+          <span *ngIf="first"><button mat-raised-button color="primary" (click)="register()">Register</button></span>
+          <span *ngIf="update"><button mat-raised-button color="primary" (click)="register()">Update</button></span>
+          <span *ngIf="show"> <button mat-button color="accent">Register success !!</button></span>
+          <span *ngIf="show3"> <button mat-button color="accent">All fields are required!!!</button></span>
+         
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,85 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div
+  id="main-wrapper"
+  [ngClass]="{ 'show-sidebar': showMobileMenu }"
+  dir="ltr"
+  data-theme="light"
+  data-layout="vertical" 
+  data-sidebar-position="absolute"
+  data-header-position="absolute"
+  data-boxed-layout="full"
+>
+  <!-- ============================================================== -->
+  <!-- Topbar header - style you can find in topbar.scss -->
+  <!-- ============================================================== -->
+  <header class="topbar" data-navbarbg="skin5">
+    <nav class="d-flex top-navbar navbar-expand-lg navbar-dark">
+      <div
+        class="navbar-header"
+        [ngClass]="expandLogo ? 'expand-logo' : ''"
+        data-logobg="skin6"
+      >
+        <!-- This is for the sidebar toggle which is visible on mobile only -->
+        <a
+          (click)="showMobileMenu = !showMobileMenu"
+          class="nav-toggler waves-effect waves-light d-block d-lg-none"
+          href="javascript:void(0)"
+        >
+          <i [ngClass]="showMobileMenu ? 'bi bi-text-left fs-6' : 'bi bi-text-left fs-6'"></i>
+        </a>
+        <!-- ============================================================== -->
+       
+      </div>
+      <!-- ============================================================== -->
+      <!-- End Logo -->
+      <!-- ============================================================== -->
+      <div
+        class="navbar-collapse collapse"
+        id="navbarSupportedContent"
+        data-navbarbg="skin5"
+        [ngbCollapse]="!isCollapsed"
+      >
+        <app-navigation
+          (toggleSidebar)="toggleSidebarType()"
+          class="w-100"
+        ></app-navigation>
+      </div>
+    </nav>
+  </header>
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Page wrapper  -->
+  <!-- ============================================================== -->
+  <div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+      <!-- ============================================================== -->
+      <!-- Start Page Content -->
+      <!-- ============================================================== -->
+      <router-outlet></router-outlet>
+      <!-- ============================================================== -->
+      <!-- End Start Page Content -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- footer -->
+    <!-- ============================================================== -->
+    <footer class="footer text-center">
+      All Rights Reserved by CSR Connect. Designed and Developed by
+     CMPE 272 FALL 22 Team 9
+    </footer>
+    <!-- ============================================================== -->
+    <!-- End footer -->
+    <!-- ============================================================== -->
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Page wrapper  -->
+  <!-- ============================================================== -->
+</div>
